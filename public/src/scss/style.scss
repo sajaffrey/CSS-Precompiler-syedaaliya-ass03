@@ -1,2 +1,14 @@
-$font-family: quando;
-$primary-color: #787878;
+$myFont: quando;
+$myColor: #787878;
+$myFontSize: 15px;
+
+body {
+    font-family: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+}
