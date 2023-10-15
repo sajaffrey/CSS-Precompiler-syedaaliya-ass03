@@ -19,9 +19,38 @@ body {
 //     max-width: $mywidth;
 //     height: $auto-height;
 // }
-
-
+//1 mixin
+@mixin theme($theme: #111111) {
+    color: $theme;
+    font-weight: 400;
+    transition: .20s;
+  }
   
+  a {
+    @include theme;
+  }
+  a:hover  {
+    @include theme($theme: #999999);
+  }
+
+  $mymargin-top: 25px;
+  $mymargin-bottom: 20px;
+  $myfont-family: 'Josefin Sans', sans-serif;
+  $myfont-weight: 400;
+  $myline-height: 1.3em;
+  $myword-wrap: break-word;
+  $mycolor: #111111;
+
+
+h3 {
+    margin-top: $mymargin-top;
+    margin-bottom: $mymargin-bottom;
+    font-family: $myfont-family;
+    font-weight: $myfont-weight;
+    line-height: $myline-height;
+    word-wrap: $myword-wrap;
+    color: $mycolor;
+}
 /*1 nesting*/
 header{
     nav {
