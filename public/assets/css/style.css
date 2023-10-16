@@ -4,11 +4,6 @@ body {
   color: #787878;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .container {
   width: 94%;
   margin: 0 auto;
