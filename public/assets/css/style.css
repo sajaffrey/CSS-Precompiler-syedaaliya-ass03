@@ -145,4 +145,23 @@ footer {
   font-size: 11px;
 }
 
+.post-title {
+  margin-top: 0;
+}
+
+.post-title a {
+  color: #324360;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 900;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.3em;
+  transition: all 0.3s ease;
+}
+
+.post-title a:hover {
+  color: #35c4ce;
+}
+
 /*# sourceMappingURL=style.css.map */
