@@ -9,48 +9,28 @@ body {
     color: $myColor;
   }
 
+  $mymax-width: 100%;
+  $auto-height:auto;
   img {
-    max-width: 100%;
-    height: auto;
+    max-width: $mymax-width;
+    height: $auto-height;
 }
-// $auto-height:auto;
-// $mywidth:100%;
-// img {
-//     max-width: $mywidth;
-//     height: $auto-height;
-// }
-//1 mixin
-@mixin theme($theme: #111111) {
-    color: $theme;
-    font-weight: 400;
-    transition: .20s;
-  }
-  
-  a {
-    @include theme;
-  }
-  a:hover  {
-    @include theme($theme: #999999);
-  }
 
-  $mymargin-top: 25px;
-  $mymargin-bottom: 20px;
-  $myfont-family: 'Josefin Sans', sans-serif;
-  $myfont-weight: 400;
-  $myline-height: 1.3em;
-  $myword-wrap: break-word;
-  $mycolor: #111111;
+//2 variable
+$mywidth:94%;
+$mymargin:0 auto;
 
-
-h3 {
-    margin-top: $mymargin-top;
-    margin-bottom: $mymargin-bottom;
-    font-family: $myfont-family;
-    font-weight: $myfont-weight;
-    line-height: $myline-height;
-    word-wrap: $myword-wrap;
-    color: $mycolor;
+.container{
+    width: $mywidth;
+    margin: $mymargin;
 }
+
+//3 variable
+$font-size: 26px;
+h3{
+    font-size: $font-size;
+}
+
 /*1 nesting*/
 header{
     nav {
