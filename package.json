@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "lite-server --baseDir=\"public\"",
-    "watch":"sass --watch public/src/scss:public/assets/css",
+    "watch":"sass --watch src/scss:public/assets/css",
     "start": "concurrently \"npm run watch\" \"npm run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
