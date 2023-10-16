@@ -157,9 +157,15 @@ footer {
     }
 }
 
+// @mixin margin-top($value, $unit: px) {
+//     margin-top: #{$value + $unit};
+//     }
+  
+  
 .post-title {
     margin-top: 0;
 }
+
 .post-title a {
     color: #324360;
     text-transform: uppercase;
@@ -173,3 +179,11 @@ footer {
 .post-title a:hover {
     color: #35c4ce;
 }
+
+//4 variable
+$breakpoint-sm: 650px;
+
+@media screen and (min-width: $breakpoint-sm) {
+    .container {
+        width: 90%;
+    }}
