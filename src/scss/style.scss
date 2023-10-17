@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $mycolora: #787878;
 $mycolorb: #111111;
 $mycolorc: #999999;
@@ -123,7 +122,7 @@ footer {
 	}
 	#footer a:hover {
 	    color: $mycolorb;
-	} 
+	}
 
 	.footer-logo {
 		width: 200px;
@@ -204,76 +203,6 @@ header{
 
 	//6 nesting
 	/* sub nav */
-=======
-// 1 variable
-$myFont: quando;
-$myColor: #787878;
-$myFontSize: 15px;
-
-body {
-    font-family: $myFont;
-    font-size: $myFontSize;
-    color: $myColor;
-  }
-
-//2 variable
-$mywidth:94%;
-$mymargin:0 auto;
-
-.container{
-    width: $mywidth;
-    margin: $mymargin;
-}
-
-//3 variable
-$font-size: 26px;
-h3{
-    font-size: $font-size;
-}
-
-/*1 nesting*/
-header{
-    nav {
-        max-width: 1170px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        ul {
-            display: flex;
-        }
-      
-        li {  margin: 0 15px;
-            position: relative;
-            line-height: 24px; }
-      
-        a {
-            font-family: 'Josefin Sans', sans-serif;
-            color: #324360;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 900;
-        }
-        a:hover {
-            color: #35c4ce;
-        }
-        header nav li.menu-item-has-children > a::after {
-            margin-left: 7px;
-            font-family: 'FontAwesome';
-            font-size: 13px;
-            color: #324360;
-            content: '\f078';
-        }
-        .current-menu-item a {
-            border-bottom: 2px solid #324360;
-        }
-      }
-}
-/*2 nesting*/
-/* sub nav */
->>>>>>> parent of 0d74fc8 (all commit)
 header{
     nav {
         ul ul{
@@ -283,11 +212,7 @@ header{
         position: absolute;
         z-index: 9999;
         left: 0;
-<<<<<<< HEAD
         background: $mycolori;
-=======
-        background: #f0f0f0;
->>>>>>> parent of 0d74fc8 (all commit)
         transition: all 0.2s ease-out;
         }
       
@@ -295,21 +220,13 @@ header{
             opacity: 1; }
 
         ul ul li {
-<<<<<<< HEAD
                 border-top: 1px solid $mycolorh;
-=======
-                border-top: 1px solid #e9e9e9;
->>>>>>> parent of 0d74fc8 (all commit)
                 margin: 0;
             }
       
          ul ul a {
         display: block;
-<<<<<<< HEAD
         color: $mycolorb;
-=======
-        color: #111111;
->>>>>>> parent of 0d74fc8 (all commit)
         min-width: 175px;
         margin: 0;
         padding: 20px 10px;
@@ -318,18 +235,12 @@ header{
         transition: .35s;
     }
      ul ul a:hover {
-<<<<<<< HEAD
         background: $mycolorj;
         color: $mycolorg; 
-=======
-        background: #ffffff;
-        color: #000; 
->>>>>>> parent of 0d74fc8 (all commit)
     }
       }
 }
 
-<<<<<<< HEAD
 
     /* posts */
     article {
@@ -548,88 +459,3 @@ header{
 //         width: 90%;
 //     }}
 
-=======
-/*3 nesting*/
-/* footer */
-footer { 
-    padding: 30px 0;
-    text-align: center;
-    background: #eaf2ff;
-    color: #989898;
-}
-#footer a {
-    color: #989898;
-}
-#footer a:hover {
-    color: #111111;
-}
-.footer-logo {
-    width: 200px;
-    margin: 20px auto;
-    text-align: center;
-    vertical-align: middle;
-}
-.footer-social-links {
-    padding: 20px 0;
-    line-height: 2em;
-}
-.footer-social-links a {
-    margin: 0 10px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.footer-social-links a span {
-    display: none;
-}
-#footer-copyright {
-    padding: 20px 0;
-    font-size: 12px;
-    color: #989898;
-}
-
-/*4 nesting*/
-.footer-social-links{
-    a {
-        margin: 0 28px;
-    }
-    i {
-        margin-right: 5px;
-    }
-    a span {
-        display: inline;
-        font-size: 11px;
-    }
-}
-
-// @mixin margin-top($value, $unit: px) {
-//     margin-top: #{$value + $unit};
-//     }
-  
-  
-.post-title {
-    margin-top: 0;
-}
-
-.post-title a {
-    color: #324360;
-    text-transform: uppercase;
-    font-size: 26px;
-    font-weight: 900;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    line-height: 1.3em;
-    transition: all .3s ease;
-}
-.post-title a:hover {
-    color: #35c4ce;
-}
-
-//4 variable
-$breakpoint-sm: 650px;
-
-@media screen and (min-width: $breakpoint-sm) {
-    .container {
-        width: 90%;
-    }}
->>>>>>> parent of 0d74fc8 (all commit)
