@@ -12,450 +12,273 @@ $myfonta: Quando;
 $myfontb: 'Josefin Sans', sans-serif;
 $myfontc: 'FontAwesome';
 
-//1variable
-body {
-    font-family: $myfonta;
-    font-size: 15px;
-    color: $mycolora;
-  }
-
-//2 variable
-img{
-	max-width: 100%;
-    height: auto;
-}
-
-//3 variable
-p {
-    margin-bottom: 25px;
-    line-height: 1.6em;
-}
-
-//4 variable
-a {
-    font-weight: 400;
-    text-decoration: none;
-    color: $mycolorb;
-    transition: .20s;
-	&:hover {
-		color: $mycolorc;
+	//1variable
+	body {
+		font-family: $myfonta;
+		font-size: 15px;
+		color: $mycolora;
 	}
-}
 
-//1 mixin
-@mixin header1 {
-	margin-top: 25px;
-    margin-bottom: 20px;
-    font-family: $myfontb;
-    font-weight: 400;
-    line-height: 1.3em;
-    word-wrap: break-word;
-    color: $mycolorb;
-}
-
-h3 {
-	@include header1;
-	font-size: 26px;
-}
-
-.container {
-    width: 94%;
-    margin: 0 auto;
-}
-
-//1 nesting
-header {
-    font-family: $myfontb;
-	nav{
-		ul{
-			display: none;
-		}
+	//2 variable
+	img{
+		max-width: 100%;
+		height: auto;
 	}
-}
-header nav ul {
-    display: none;
-}
 
-.top-logo {
-    width: 200px;
-    margin: 20px auto 40px;
-}
+	//3 variable
+	p {
+		margin-bottom: 25px;
+		line-height: 1.6em;
+	}
 
-article {
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.image-part {
-    margin-bottom: 10px;
-}
-
-//2 nesting
-.post-title {
-	margin-top: 0;
+	//4 variable
 	a {
-		color: $mycolord;
-		text-transform: uppercase;
-		font-size: 26px;
-		font-weight: 900;
-		margin-top: 15px;
-		margin-bottom: 15px;
-		line-height: 1.3em;
-		transition: all .3s ease;
+		font-weight: 400;
+		text-decoration: none;
+		color: $mycolorb;
+		transition: .20s;
 		&:hover {
-			color: $mycolore;
+			color: $mycolorc;
 		}
 	}
-}
 
-footer {
-    padding: 30px 0;
-    text-align: center;
-    background: $mycolorh;
-    color: $mycolorf;
-}
-
-//3 nesting
-#footer a {
-	    color: $mycolorf;
-	}
-	#footer a:hover {
-	    color: $mycolorb;
+	//1 mixin
+	@mixin header1 {
+		margin-top: 25px;
+		margin-bottom: 20px;
+		font-family: $myfontb;
+		font-weight: 400;
+		line-height: 1.3em;
+		word-wrap: break-word;
+		color: $mycolorb;
 	}
 
-	.footer-logo {
+	h3 {
+		@include header1;
+		font-size: 26px;
+	}
+
+	.container {
+		width: 94%;
+		margin: 0 auto;
+	}
+
+	//1 nesting
+	header {
+		font-family: $myfontb;
+		nav{
+			ul{
+				display: none;
+			}
+		}
+	}
+	header nav ul {
+		display: none;
+	}
+
+	.top-logo {
 		width: 200px;
-		margin: 20px auto;
-		text-align: center;
-		vertical-align: middle;
+		margin: 20px auto 40px;
 	}
 
-	//4 nesting
-	.footer-social-links {
-		padding: 20px 0;
-		line-height: 2em;
-		a{
-	    margin: 0 10px;
-		font-size: 16px;
-		letter-spacing: 1px;
+	article {
+		margin-bottom: 50px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.image-part {
+		margin-bottom: 10px;
+	}
+
+	//2 mixin
+	@mixin texttransform {
 		text-transform: uppercase;
-		}
-		span {
-			display: none;
+	}
+
+	//2 nesting
+	.post-title {
+		margin-top: 0;
+		a {
+			color: $mycolord;
+			@include texttransform();
+			font-size: 26px;
+			font-weight: 900;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			line-height: 1.3em;
+			transition: all .3s ease;
+			&:hover {
+				color: $mycolore;
+			}
 		}
 	}
 
-	//5 variable
-	#footer-copyright {
-		padding: 20px 0;
-		font-size: 12px;
+	footer {
+		padding: 30px 0;
+		text-align: center;
+		background: $mycolorh;
 		color: $mycolorf;
 	}
 
-	
-@media only screen and (min-width: 650px) {
-    .container {
-        width: 90%;
-    }
-}
-
-//5 nesting
-header{
-	    nav {
-	        max-width: 1170px;
-	        margin: 0 auto;
-	        display: flex;
-	        justify-content: center;
-	        align-items: center;
-	        height: 60px;
-	        ul {
-	            display: flex;
-	        }
-		  
-	        li {  margin: 0 15px;
-	            position: relative;
-	            line-height: 24px; }
-		  
-	        a {
-	            font-family: $myfontb;
-	            color: $mycolord;
-	            letter-spacing: 1px;
-	            text-transform: uppercase;
-	            font-size: 12px;
-	            font-weight: 900;
-	        }
-	        a:hover {
-	            color: $mycolore;
-	        }
-	        header nav li.menu-item-has-children > a::after {
-	            margin-left: 7px;
-	            font-family: $myfontc;
-	            font-size: 13px;
-	            color: $mycolord;
-	            content: '\f078';
-	        }
-	        .current-menu-item a {
-	            border-bottom: 2px solid $mycolord;
-	        }
-	      }
-	}
-
-	//6 nesting
-	/* sub nav */
-header{
-    nav {
-        ul ul{
-        visibility: hidden;
-        opacity: 0;
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        left: 0;
-        background: $mycolori;
-        transition: all 0.2s ease-out;
-        }
-      
-        ul li:hover ul { visibility: visible;
-            opacity: 1; }
-
-        ul ul li {
-                border-top: 1px solid $mycolorh;
-                margin: 0;
-            }
-      
-         ul ul a {
-        display: block;
-        color: $mycolorb;
-        min-width: 175px;
-        margin: 0;
-        padding: 20px 10px;
-        line-height: 1.4em;
-        letter-spacing: 1px;
-        transition: .35s;
-    }
-     ul ul a:hover {
-        background: $mycolorj;
-        color: $mycolorg; 
-    }
-      }
-}
-
-
-    /* posts */
-    article {
-        display: flex;
-    }
-
-	//7 nesting
-    .image-part {
-        flex: 1;
-        overflow: hidden;
-        margin-bottom: 0;
-		img {
-			transition: transform 3.5s ease-in-out;
+	//3 nesting
+	#footer a {
+			color: $mycolorf;
 		}
-		&:hover {
-			transform: scale(1.5,1.5);
+		#footer a:hover {
+			color: $mycolorb;
 		}
-    }
 
-    .content-part {
-        flex: 1;
-        padding-left: 50px;
-    }
+		.footer-logo {
+			width: 200px;
+			margin: 20px auto;
+			text-align: center;
+			vertical-align: middle;
+		}
 
-/* footer */
-//8 nesting
-.footer-social-links a {
-	margin: 0 28px;
-	i {
-		margin-right: 5px;
+		//4 nesting
+		.footer-social-links {
+			padding: 20px 0;
+			line-height: 2em;
+			a{
+			margin: 0 10px;
+			font-size: 16px;
+			letter-spacing: 1px;
+			@include texttransform();
+			}
+			span {
+				display: none;
+			}
+		}
+
+		//5 variable
+		#footer-copyright {
+			padding: 20px 0;
+			font-size: 12px;
+			color: $mycolorf;
+		}
+
+		
+	@media only screen and (min-width: 650px) {
+		.container {
+			width: 90%;
+		}
 	}
-	span {
-		display: inline;
-		font-size: 11px;
+
+	//5 nesting
+	header{
+			nav {
+				max-width: 1170px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 60px;
+				ul {
+					display: flex;
+				}
+			
+				li {  margin: 0 15px;
+					position: relative;
+					line-height: 24px; }
+			
+				a {
+					font-family: $myfontb;
+					color: $mycolord;
+					letter-spacing: 1px;
+					@include texttransform();
+					font-size: 12px;
+					font-weight: 900;
+				}
+				a:hover {
+					color: $mycolore;
+				}
+				header nav li.menu-item-has-children > a::after {
+					margin-left: 7px;
+					font-family: $myfontc;
+					font-size: 13px;
+					color: $mycolord;
+					content: '\f078';
+				}
+				.current-menu-item a {
+					border-bottom: 2px solid $mycolord;
+				}
+			}
+		}
+
+		//6 nesting
+		/* sub nav */
+	header{
+		nav {
+			ul ul{
+			visibility: hidden;
+			opacity: 0;
+			display: block;
+			position: absolute;
+			z-index: 9999;
+			left: 0;
+			background: $mycolori;
+			transition: all 0.2s ease-out;
+			}
+		
+			ul li:hover ul { visibility: visible;
+				opacity: 1; }
+
+			ul ul li {
+					border-top: 1px solid $mycolorh;
+					margin: 0;
+				}
+		
+			ul ul a {
+			display: block;
+			color: $mycolorb;
+			min-width: 175px;
+			margin: 0;
+			padding: 20px 10px;
+			line-height: 1.4em;
+			letter-spacing: 1px;
+			transition: .35s;
+		}
+		ul ul a:hover {
+			background: $mycolorj;
+			color: $mycolorg; 
+		}
+		}
 	}
-}
 
 
+		/* posts */
+		article {
+			display: flex;
+		}
 
-// //2 variable
-// $mywidth:94%;
-// $mymargin:0 auto;
+		//7 nesting
+		.image-part {
+			flex: 1;
+			overflow: hidden;
+			margin-bottom: 0;
+			img {
+				transition: transform 3.5s ease-in-out;
+				&:hover {
+					transform: scale(1.5,1.5);
+				}
+			}
+		}
 
-// .container{
-//     width: $mywidth;
-//     margin: $mymargin;
-// }
+		.content-part {
+			flex: 1;
+			padding-left: 50px;
+		}
 
-// //3 variable
-// $font-size: 26px;
-// h3{
-//     font-size: $font-size;
-// }
-
-// /*1 nesting*/
-// header{
-//     nav {
-//         max-width: 1170px;
-//         margin: 0 auto;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         height: 60px;
-//         ul {
-//             display: flex;
-//         }
-      
-//         li {  margin: 0 15px;
-//             position: relative;
-//             line-height: 24px; }
-      
-//         a {
-//             font-family: 'Josefin Sans', sans-serif;
-//             color: #324360;
-//             letter-spacing: 1px;
-//             text-transform: uppercase;
-//             font-size: 12px;
-//             font-weight: 900;
-//         }
-//         a:hover {
-//             color: #35c4ce;
-//         }
-//         header nav li.menu-item-has-children > a::after {
-//             margin-left: 7px;
-//             font-family: 'FontAwesome';
-//             font-size: 13px;
-//             color: #324360;
-//             content: '\f078';
-//         }
-//         .current-menu-item a {
-//             border-bottom: 2px solid #324360;
-//         }
-//       }
-// }
-// /*2 nesting*/
-// /* sub nav */
-// header{
-//     nav {
-//         ul ul{
-//         visibility: hidden;
-//         opacity: 0;
-//         display: block;
-//         position: absolute;
-//         z-index: 9999;
-//         left: 0;
-//         background: #f0f0f0;
-//         transition: all 0.2s ease-out;
-//         }
-      
-//         ul li:hover ul { visibility: visible;
-//             opacity: 1; }
-
-//         ul ul li {
-//                 border-top: 1px solid #e9e9e9;
-//                 margin: 0;
-//             }
-      
-//          ul ul a {
-//         display: block;
-//         color: #111111;
-//         min-width: 175px;
-//         margin: 0;
-//         padding: 20px 10px;
-//         line-height: 1.4em;
-//         letter-spacing: 1px;
-//         transition: .35s;
-//     }
-//      ul ul a:hover {
-//         background: #ffffff;
-//         color: #000; 
-//     }
-//       }
-// }
-
-// /*3 nesting*/
-// /* footer */
-// footer { 
-//     padding: 30px 0;
-//     text-align: center;
-//     background: #eaf2ff;
-//     color: #989898;
-// }
-// #footer a {
-//     color: #989898;
-// }
-// #footer a:hover {
-//     color: #111111;
-// }
-// .footer-logo {
-//     width: 200px;
-//     margin: 20px auto;
-//     text-align: center;
-//     vertical-align: middle;
-// }
-// .footer-social-links {
-//     padding: 20px 0;
-//     line-height: 2em;
-// }
-// .footer-social-links a {
-//     margin: 0 10px;
-//     font-size: 16px;
-//     letter-spacing: 1px;
-//     text-transform: uppercase;
-// }
-// .footer-social-links a span {
-//     display: none;
-// }
-// #footer-copyright {
-//     padding: 20px 0;
-//     font-size: 12px;
-//     color: #989898;
-// }
-
-// /*4 nesting*/
-// .footer-social-links{
-//     a {
-//         margin: 0 28px;
-//     }
-//     i {
-//         margin-right: 5px;
-//     }
-//     a span {
-//         display: inline;
-//         font-size: 11px;
-//     }
-// }
-
-// // @mixin margin-top($value, $unit: px) {
-// //     margin-top: #{$value + $unit};
-// //     }
-  
-  
-// .post-title {
-//     margin-top: 0;
-// }
-
-// .post-title a {
-//     color: #324360;
-//     text-transform: uppercase;
-//     font-size: 26px;
-//     font-weight: 900;
-//     margin-top: 15px;
-//     margin-bottom: 15px;
-//     line-height: 1.3em;
-//     transition: all .3s ease;
-// }
-// .post-title a:hover {
-//     color: #35c4ce;
-// }
-
-// //4 variable
-// $breakpoint-sm: 650px;
-
-// @media screen and (min-width: $breakpoint-sm) {
-//     .container {
-//         width: 90%;
-//     }}
-
+	/* footer */
+	//8 nesting
+	.footer-social-links a {
+		margin: 0 28px;
+		i {
+			margin-right: 5px;
+		}
+		span {
+			display: inline;
+			font-size: 11px;
+		}
+	}
